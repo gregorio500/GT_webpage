@@ -1,0 +1,102 @@
+.container
+	position: absolute
+	top: 0
+	height: 100vh
+	width: 100%
+	max-width: 1200px
+	margin-left: auto
+    margin-right: auto
+	background: yellow
+  
+	
+
+header
+	height: 120px
+	background: red
+	
+
+h1
+	float: left
+	margin: 10px 0 0 15px
+	position: relative
+	display: flex
+	align-items: center
+	justify-content: center
+	 
+	width: 100px
+	height: 100px
+	background: black
+		/*position: center*/
+	.logo-gt
+		/*margin: auto */
+		position: relative
+		width: 80px
+		height: 80px
+		background: 
+			image: url(/assets/img/gt3.svg)
+			repeat: no-repeat
+			position: center
+
+
+
+.menu-burger
+	float: right
+	margin: 10px 15px 0 0px
+	display: inline-block
+	position: relative
+	width: 100px
+	height: 100px
+	background: black
+	border-radius: 50%
+	cursor: pointer
+
+	.bar
+		position: absolute
+		width: 70px
+		height: 1px
+		background: #FFFFC2
+		transition: all 300ms ease
+		
+		&:nth-child(1)
+			left: 15px
+			top: 25px
+		&:nth-child(2)
+			left: 15px
+			top: 50px
+			&:after
+				content: "";
+				position: absolute
+				left: 0px
+				top: 0px
+				width: 70px
+				height: 1px
+				background: #FFFFC2
+				transition: all 300ms ease
+				
+		&:nth-child(3)
+			right: 15px
+			top: 75px
+	&:hover
+		.bar
+			&:nth-child(1),
+			&:nth-child(3)
+				width: 0
+			&:nth-child(2)
+				transform: rotate(-45deg)
+				&:after
+					transform: rotate(-90deg)
+			
+nav 
+	a
+		display: none
+		margin-left: 200px
+
+	color: rgba(0,0,0,0.7)
+	font:
+		size: 14px
+		weight: 700
+		text-transform: uppercase
+
+.intro
+	clear: both
+	background: green

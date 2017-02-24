@@ -67,7 +67,8 @@ figure {
  * 2. Show the overflow in Edge and IE.
  */
 hr {
-  box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+          box-sizing: content-box;
   /* 1 */
   height: 0;
   /* 1 */
@@ -290,7 +291,8 @@ fieldset {
  *    `fieldset` elements in all browsers.
  */
 legend {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   color: inherit;
   /* 2 */
@@ -325,7 +327,8 @@ textarea {
  */
 [type="checkbox"],
 [type="radio"] {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   /* 1 */
   padding: 0;
   /* 2 */ }
@@ -480,9 +483,113 @@ body {
 
 body {
   background: #F6F6F8;
-  font-size: 14px;
+  font-size: 24px;
   line-height: 1.6;
   font-family: 'Open Sans' sans-serif;
   color: #2E2D33;
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%; }
+
+.container {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+    margin-left-margin-right: auto;
+  background: yellow; }
+
+header {
+  height: 120px;
+  background: red; }
+
+h1 {
+  float: left;
+  margin: 10px 0 0 15px;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100px;
+  height: 100px;
+  background: black;
+  /*position: center*/ }
+  h1 .logo-gt {
+    /*margin: auto */
+    position: relative;
+    width: 80px;
+    height: 80px;
+    background-image: url(/assets/img/gt3.svg);
+    background-repeat: no-repeat;
+    background-position: center; }
+
+.menu-burger {
+  float: right;
+  margin: 10px 15px 0 0px;
+  display: inline-block;
+  position: relative;
+  width: 100px;
+  height: 100px;
+  background: black;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  cursor: pointer; }
+  .menu-burger .bar {
+    position: absolute;
+    width: 70px;
+    height: 1px;
+    background: #FFFFC2;
+    -webkit-transition: all 300ms ease;
+    transition: all 300ms ease; }
+    .menu-burger .bar:nth-child(1) {
+      left: 15px;
+      top: 25px; }
+    .menu-burger .bar:nth-child(2) {
+      left: 15px;
+      top: 50px; }
+      .menu-burger .bar:nth-child(2):after {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 0px;
+        width: 70px;
+        height: 1px;
+        background: #FFFFC2;
+        -webkit-transition: all 300ms ease;
+        transition: all 300ms ease; }
+    .menu-burger .bar:nth-child(3) {
+      right: 15px;
+      top: 75px; }
+  .menu-burger:hover .bar:nth-child(1), .menu-burger:hover .bar:nth-child(3) {
+    width: 0; }
+  .menu-burger:hover .bar:nth-child(2) {
+    -webkit-transform: rotate(-45deg);
+        -ms-transform: rotate(-45deg);
+            transform: rotate(-45deg); }
+    .menu-burger:hover .bar:nth-child(2):after {
+      -webkit-transform: rotate(-90deg);
+          -ms-transform: rotate(-90deg);
+              transform: rotate(-90deg); }
+
+nav {
+  color: rgba(0, 0, 0, 0.7);
+  font-size: 14px;
+  font-weight: 700;
+  font-text-transform: uppercase; }
+  nav a {
+    display: none;
+    margin-left: 200px; }
+
+.intro {
+  clear: both;
+  background: green; }
