@@ -4,7 +4,8 @@
 	width: 100%
 	max-width: 1200px
 	margin: 0 auto
-	background: yellow
+	background : #DCE7E8
+    background : rgba(220, 231, 232, 1)
     
 
 header
@@ -98,4 +99,164 @@ nav
 
 .intro
 	clear: both
-	background: green
+	background : #000000
+    background : rgba(0, 0, 0, 1)
+	width: 70%
+	height: 50%
+	/*text-align: center*/
+	margin: 15px auto
+	
+
+.img-welcome
+	margin: 200px
+	display: inline-block
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* start intro animation */
+
+.movie
+	perspective: 500px
+	transform-style: preserve-3d
+
+#base 
+	width: 450px
+    height: 215px
+	margin: 100px auto
+	background: #171919
+    transform: rotateY(-20deg)
+
+.movie img 
+	width: 75px
+	height: 64.8px
+	animation: myMove2 5s 0s
+
+
+
+.over 
+	width: 450px
+    height: 215px
+    margin: 100px auto
+	position: relative
+	background: #171919
+
+.lt-cube-grid 
+	width: 300px
+	height: 195px
+	margin: 100px auto
+	position: relative
+	/*	background-color: aqua; in this place I can put images with text under main image */
+
+	background-clip: content-box
+	padding: 10px
+	  
+
+
+
+.lt-cube-grid .lt-cube 
+	width: 75px
+	height: 64.8px	
+	animation: left-ScaleDelay 3.5s ease-in
+	/*  background-color: pink; */
+	float: left
+
+
+.lt-cube-grid .lt-cube1 
+	width: 75px
+	height: 64.8px
+	animation: lt-ScaleDelay 3.5s ease-in  
+	float: right
+
+.c1 img:hover  
+    filter: alpha(opacity=50)
+    opacity: 0
+    transition: opacity 2.2s ease-in-out
+	
+.c2 img:hover 
+	opacity: 0
+.c3 img:hover 
+	opacity: 0
+.c4 img:hover 
+	opacity: 0 
+.c5 img:hover 
+	opacity: 0
+.c6 img:hover 
+	opacity: 0
+.c7 img:hover 
+	opacity: 0
+.c8 img:hover 
+	opacity: 0
+.c9 img:hover 
+	opacity: 0 
+
+@keyframes left-ScaleDelay 
+	0%, 50%, 100% 
+		
+		transform: scale3D(0, 0, 0)
+		transform: skewX(90deg)
+		filter: blur(20px)	  	  
+	50% 
+		
+		transform: scale3D(0, 0, 1)
+		transform: skewX(50deg)
+		filter: blur(15px)
+	   
+	100% 
+		transform: scale3D(1, 1, 1)
+		transform: skewX(0deg)
+		filter: blur(0px)
+
+
+@keyframes lt-ScaleDelay 
+	0%, 50%, 100% 
+		transform: scale3D(0, 0, 0)
+		transform: skewX(-90deg)
+		filter: blur(20px)  
+	50%
+    
+		transform: scale3D(0, 0, 1)
+		transform: skewX(-50deg)
+		filter: blur(15px) 
+	  
+	100% 
+		transform: scale3D(1, 1, 1)
+		transform: skewX(0deg)
+		filter: blur(0px)
+
+
+@keyframes myMove2 
+	0% 
+		transform: rotateY(90deg) scale(0)
+		filter: brightness(20) 
+	20% 
+		transform: rotateY(60deg) scale(0.2)
+		filter: brightness(30)
+	59% 
+		transform: rotateY(40deg) scale(0.4)
+		filter: brightness(8)
+	60% 
+		transform: rotateY(20deg) scale(0.9)
+
+		filter: brightness(11)
+	100% 
+		transform: rotateY(0deg) scale(1)
+
+
+
+
+
+
+
+	
