@@ -23,7 +23,8 @@ html {
  * Remove the margin in all browsers (opinionated).
  */
 body {
-  margin: 0; }
+  margin: 0;
+  padding: 0; }
 
 /**
  * Add the correct display in IE 9-.
@@ -491,22 +492,21 @@ body {
   -webkit-text-size-adjust: 100%; }
 
 .container {
-  position: absolute;
-  top: 0;
+  /*position: absolute*/
   height: 100vh;
   width: 100%;
   max-width: 1200px;
-  margin-left: auto;
-    margin-left-margin-right: auto;
+  margin: 0 auto;
   background: yellow; }
 
 header {
+  /*position: relative*/
   height: 120px;
   background: red; }
 
 h1 {
   float: left;
-  margin: 10px 0 0 15px;
+  margin: 15px 0 0 15px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -536,7 +536,6 @@ h1 {
 .menu-burger {
   float: right;
   margin: 10px 15px 0 0px;
-  display: inline-block;
   position: relative;
   width: 100px;
   height: 100px;
@@ -582,12 +581,12 @@ h1 {
               transform: rotate(-90deg); }
 
 nav {
+  display: none;
   color: rgba(0, 0, 0, 0.7);
   font-size: 14px;
   font-weight: 700;
   font-text-transform: uppercase; }
   nav a {
-    display: none;
     margin-left: 200px; }
 
 .intro {

@@ -1,23 +1,22 @@
 .container
-	position: absolute
-	top: 0
+	/*position: absolute*/
 	height: 100vh
 	width: 100%
 	max-width: 1200px
-	margin-left: auto
-    margin-right: auto
+	margin: 0 auto
 	background: yellow
-  
-	
+    
 
 header
+	/*position: relative*/
 	height: 120px
 	background: red
-	
+    
+
 
 h1
 	float: left
-	margin: 10px 0 0 15px
+	margin: 15px 0 0 15px
 	position: relative
 	display: flex
 	align-items: center
@@ -42,7 +41,6 @@ h1
 .menu-burger
 	float: right
 	margin: 10px 15px 0 0px
-	display: inline-block
 	position: relative
 	width: 100px
 	height: 100px
@@ -86,9 +84,9 @@ h1
 				&:after
 					transform: rotate(-90deg)
 			
-nav 
+nav
+	display: none
 	a
-		display: none
 		margin-left: 200px
 
 	color: rgba(0,0,0,0.7)
@@ -96,6 +94,7 @@ nav
 		size: 14px
 		weight: 700
 		text-transform: uppercase
+
 
 .intro
 	clear: both
