@@ -495,7 +495,7 @@ body {
   /*position: absolute*/
   height: 100vh;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1360px;
   margin: 0 auto;
   background: #DCE7E8;
     background-background: #dce7e8; }
@@ -507,7 +507,7 @@ header {
 
 h1 {
   float: left;
-  margin: 15px 0 0 15px;
+  margin: 22px 0 0 39px;
   position: relative;
   display: -webkit-box;
   display: -webkit-flex;
@@ -521,8 +521,8 @@ h1 {
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 100px;
-  height: 100px;
+  width: 136px;
+  height: 136px;
   background: black;
   /*position: center*/ }
   h1 .logo-gt {
@@ -536,10 +536,10 @@ h1 {
 
 .menu-burger {
   float: right;
-  margin: 10px 15px 0 0px;
+  margin: 22px 39px 0 0px;
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 136px;
+  height: 136px;
   background: black;
   -webkit-border-radius: 50%;
           border-radius: 50%;
@@ -547,29 +547,29 @@ h1 {
   .menu-burger .bar {
     position: absolute;
     width: 70px;
-    height: 1px;
+    height: 3px;
     background: #FFFFC2;
     -webkit-transition: all 300ms ease;
     transition: all 300ms ease; }
     .menu-burger .bar:nth-child(1) {
-      left: 15px;
-      top: 25px; }
+      left: 34px;
+      top: 38px; }
     .menu-burger .bar:nth-child(2) {
-      left: 15px;
-      top: 50px; }
+      left: 34px;
+      top: 68px; }
       .menu-burger .bar:nth-child(2):after {
         content: "";
         position: absolute;
         left: 0px;
         top: 0px;
         width: 70px;
-        height: 1px;
+        height: 3px;
         background: #FFFFC2;
         -webkit-transition: all 300ms ease;
         transition: all 300ms ease; }
     .menu-burger .bar:nth-child(3) {
-      right: 15px;
-      top: 75px; }
+      right: 34px;
+      top: 98px; }
   .menu-burger:hover .bar:nth-child(1), .menu-burger:hover .bar:nth-child(3) {
     width: 0; }
   .menu-burger:hover .bar:nth-child(2) {
@@ -591,65 +591,66 @@ nav {
     margin-left: 200px; }
 
 .intro {
+  position: absolute;
   clear: both;
   background: #000000;
     background-background: black;
-  width: 70%;
-  height: 50%;
-  /*text-align: center*/
-  margin: 15px auto; }
-
-.img-welcome {
-  margin: 200px;
-  display: inline-block; }
+  width: 745px;
+  height: 338px;
+  /*text-align: center  margin: 22px 0 0 39px  +136*/
+  /*margin-left: 50%*/
+  /*margin-right: 50%*/
+  margin-top: 20px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center; }
 
 /* start intro animation */
-.movie {
-  -webkit-perspective: 500px;
-          perspective: 500px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d; }
-
-#base {
-  width: 450px;
-    width-height: 215px;
-  margin: 100px auto;
-  background: #171919;
-    background-transform: rotateY(-20deg); }
-
+/*.movie*/
+/*	perspective: 500px
+	transform-style: preserve-3d*/
+/*#base */
+/*	width: 650px
+    height: 515px
+	margin: 10px auto
+	background: #15b9b9
+    transform: rotateY(-20deg)*/
 .movie img {
-  width: 75px;
-  height: 64.8px;
+  width: 111px;
+    width-height: 113px;
   -webkit-animation: myMove2 5s 0s;
           animation: myMove2 5s 0s; }
 
-.over {
-  width: 450px;
-    width-height: 215px;
-    width-margin: 100px auto;
-  position: relative;
-  background: #171919; }
-
+/*.over */
+/*	width: 650px
+    height: 515px
+    margin: 10px auto
+	position: relative
+	background: #171919*/
 .lt-cube-grid {
-  width: 300px;
-  height: 195px;
-  margin: 100px auto;
+  width: 444px;
+  /*435px +213, 444*/
+  height: 339px;
+  margin: 0 auto;
   position: relative;
-  /*	background-color: aqua; in this place I can put images with text under main image */
-  background-clip: content-box;
-  padding: 10px; }
+  /*	background-color: aqua; in this place I can put images with text under main image */ }
 
+/*	background-clip: content-box */
+/*	padding: 10px*/
 .lt-cube-grid .lt-cube {
-  width: 75px;
-  height: 64.8px;
+  width: 111px;
+  height: 113px;
   -webkit-animation: left-ScaleDelay 3.5s ease-in;
           animation: left-ScaleDelay 3.5s ease-in;
   /*  background-color: pink; */
   float: left; }
 
 .lt-cube-grid .lt-cube1 {
-  width: 75px;
-  height: 64.8px;
+  width: 111px;
+  height: 113px;
   -webkit-animation: lt-ScaleDelay 3.5s ease-in;
           animation: lt-ScaleDelay 3.5s ease-in;
   float: right; }
