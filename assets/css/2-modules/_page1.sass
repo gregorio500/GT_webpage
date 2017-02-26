@@ -2,7 +2,7 @@
 	/*position: absolute*/
 	height: 100vh
 	width: 100%
-	max-width: 1200px
+	max-width: 1360px
 	margin: 0 auto
 	background : #DCE7E8
     background : rgba(220, 231, 232, 1)
@@ -17,14 +17,14 @@ header
 
 h1
 	float: left
-	margin: 15px 0 0 15px
+	margin: 22px 0 0 39px
 	position: relative
 	display: flex
 	align-items: center
 	justify-content: center
 	 
-	width: 100px
-	height: 100px
+	width: 136px
+	height: 136px
 	background: black
 		/*position: center*/
 	.logo-gt
@@ -41,10 +41,10 @@ h1
 
 .menu-burger
 	float: right
-	margin: 10px 15px 0 0px
+	margin: 22px 39px 0 0px
 	position: relative
-	width: 100px
-	height: 100px
+	width: 136px
+	height: 136px
 	background: black
 	border-radius: 50%
 	cursor: pointer
@@ -52,29 +52,29 @@ h1
 	.bar
 		position: absolute
 		width: 70px
-		height: 1px
+		height: 3px
 		background: #FFFFC2
 		transition: all 300ms ease
 		
 		&:nth-child(1)
-			left: 15px
-			top: 25px
+			left: 34px
+			top: 38px
 		&:nth-child(2)
-			left: 15px
-			top: 50px
+			left: 34px
+			top: 68px
 			&:after
 				content: "";
 				position: absolute
 				left: 0px
 				top: 0px
 				width: 70px
-				height: 1px
+				height: 3px
 				background: #FFFFC2
 				transition: all 300ms ease
 				
 		&:nth-child(3)
-			right: 15px
-			top: 75px
+			right: 34px
+			top: 98px
 	&:hover
 		.bar
 			&:nth-child(1),
@@ -98,26 +98,22 @@ nav
 
 
 .intro
+	position: absolute
 	clear: both
 	background : #000000
     background : rgba(0, 0, 0, 1)
-	width: 70%
-	height: 50%
-	/*text-align: center*/
-	margin: 15px auto
+	width: 745px
+	height: 358px
+	/*text-align: center  margin: 22px 0 0 39px  +136*/
+	/*margin-left: 50%*/
+	/*margin-right: 50%*/
+	margin-top: 20px
+	top: 50%
+	left: 50%
+	transform: translate(-50%, -50%)
+	text-align: center
 	
-
-.img-welcome
-	margin: 200px
-	display: inline-block
-
-
-
-
-
-
-
-
+	
 
 
 
@@ -127,34 +123,34 @@ nav
 
 /* start intro animation */
 
-.movie
-	perspective: 500px
-	transform-style: preserve-3d
+/*.movie
+	perspective: 50px
+	transform-style: preserve-3d*/
 
 #base 
-	width: 450px
-    height: 215px
-	margin: 100px auto
-	background: #171919
+	width: 650px
+    height: 515px
+	margin: 10px auto
+	background: #15b9b9
     transform: rotateY(-20deg)
 
 .movie img 
-	width: 75px
-	height: 64.8px
+	width: 78px /*75px*/  
+	height: 69px /*64.8px*/  
 	animation: myMove2 5s 0s
 
 
 
 .over 
-	width: 450px
-    height: 215px
-    margin: 100px auto
-	position: relative
+	width: 650px
+    height: 515px
+    margin: 10px auto
+	/*position: relative*/
 	background: #171919
 
 .lt-cube-grid 
-	width: 300px
-	height: 195px
+	width: 312px; /*300px + 12*/
+	height: 207px /*195px + 12*/
 	margin: 100px auto
 	position: relative
 	/*	background-color: aqua; in this place I can put images with text under main image */
@@ -166,16 +162,16 @@ nav
 
 
 .lt-cube-grid .lt-cube 
-	width: 75px
-	height: 64.8px	
+	width: 78px
+	height: 69px	
 	animation: left-ScaleDelay 3.5s ease-in
 	/*  background-color: pink; */
 	float: left
 
 
 .lt-cube-grid .lt-cube1 
-	width: 75px
-	height: 64.8px
+	width: 78px
+	height: 69px
 	animation: lt-ScaleDelay 3.5s ease-in  
 	float: right
 
