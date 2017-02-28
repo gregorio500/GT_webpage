@@ -3,6 +3,8 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
+var csso        = require('gulp-csso')
+var cleanCSS = require('gulp-clean-css');
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -51,6 +53,24 @@ gulp.task('sass', function () {
         .pipe(gulp.dest('assets/css'));
 });
 
+
+gulp.task('default', function () {
+    return gulp.src('./main.css')
+        .pipe(csso())
+        .pipe(gulp.dest('assets/css'));
+});
+ 
+gulp.task('development', function () {
+    return gulp.src('./main.css')
+        .pipe(csso({
+            restructure: false,
+            sourceMap: true,
+            debug: true
+        }))
+        .pipe(gulp.dest('assets/css'));
+});
+
+
 /**
  * Watch scss files for changes & recompile
  * Watch html/md files, run jekyll & reload BrowserSync
@@ -58,7 +78,17 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('assets/css/**', ['sass']);
     gulp.watch(['*.html', '_layouts/*.html', '_posts/*'], ['jekyll-rebuild']);
+	 
 });
+
+/** minify css 777 */
+gulp.task('minify-css', function() {
+  return gulp.src('styles/*.css')
+    .pipe(cleanCSS({compatibility: 'ie8'}))
+    .pipe(gulp.dest('dist'));
+});
+
+
 
 /**
  * Default task, running just `gulp` will compile the sass,

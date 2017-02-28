@@ -1,3 +1,4 @@
+/*@import "0-tools/bourbon/bourbon";*/
 /*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -501,9 +502,9 @@ body {
     background-background: #dce7e8; }
 
 header {
-  /*position: relative*/
+  position: relative;
   height: 120px;
-  background: red; }
+  /*background: red*/ }
 
 h1 {
   float: left;
@@ -523,10 +524,8 @@ h1 {
           justify-content: center;
   width: 136px;
   height: 136px;
-  background: black;
-  /*position: center*/ }
+  background: black; }
   h1 .logo-gt {
-    /*margin: auto */
     position: relative;
     width: 80px;
     height: 80px;
@@ -583,69 +582,63 @@ h1 {
 
 nav {
   display: none;
-  color: rgba(0, 0, 0, 0.7);
-  font-size: 14px;
-  font-weight: 700;
-  font-text-transform: uppercase; }
+  font-size: 14px; }
   nav a {
-    margin-left: 200px; }
+    margin-left: 200px;
+      margin-left-color: rgba(0, 0, 0, 0.7); }
 
 .intro {
   position: absolute;
   clear: both;
-  background: #000000;
-    background-background: black;
   width: 745px;
-  height: 338px;
-  /*text-align: center  margin: 22px 0 0 39px  +136*/
-  /*margin-left: 50%*/
-  /*margin-right: 50%*/
-  margin-top: 20px;
+  height: 358px;
+  background-color: black;
+    background-color-webkit-box-shadow: 10.5px 18.187px 21px 0px rgba(0, 0, 0, 0.75);
+    background-color-z-index: 2;
+  margin-top: 4h;
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  text-align: center; }
+  text-align: center;
+  display: block;
+  /*text-align: center  margin: 22px 0 0 39px  +136*/
+  /*margin-left: 50%*/
+  /*margin-right: 50%*/ }
 
+/*justify-content: center*/
 /* start intro animation */
-/*.movie*/
-/*	perspective: 500px
-	transform-style: preserve-3d*/
-/*#base */
-/*	width: 650px
-    height: 515px
-	margin: 10px auto
-	background: #15b9b9
-    transform: rotateY(-20deg)*/
 .movie img {
   width: 111px;
-    width-height: 113px;
+  height: 113px;
   -webkit-animation: myMove2 5s 0s;
           animation: myMove2 5s 0s; }
 
 /*.over */
-/*	width: 650px
-    height: 515px
-    margin: 10px auto
-	position: relative
-	background: #171919*/
+/*width: 650px*/
+/*height: 515px*/
+/*margin: 10px auto*/
+/*position: relative*/
+/*background: #171919 */
 .lt-cube-grid {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
   width: 444px;
-  /*435px +213, 444*/
   height: 339px;
-  margin: 0 auto;
-  position: relative;
-  /*	background-color: aqua; in this place I can put images with text under main image */ }
+  /*	background-color: aqua; in this place I can put images with text under main image */
+  /*	background-clip: content-box */
+  /*	padding: 10px*/ }
 
-/*	background-clip: content-box */
-/*	padding: 10px*/
 .lt-cube-grid .lt-cube {
   width: 111px;
   height: 113px;
   -webkit-animation: left-ScaleDelay 3.5s ease-in;
           animation: left-ScaleDelay 3.5s ease-in;
-  /*  background-color: pink; */
   float: left; }
 
 .lt-cube-grid .lt-cube1 {
@@ -826,3 +819,92 @@ nav {
   100% {
     -webkit-transform: rotateY(0deg) scale(1);
             transform: rotateY(0deg) scale(1); } }
+
+.text {
+  font-size: 1em;
+  margin-top: -webkit-calc(358px + 8vh);
+  margin-top: calc(358px + 8vh);
+  /*margin-top: 10px */
+  /*line-height: 1px*/
+  /*letter-spacing: 2px*/
+  letter-spacing: 0.1em;
+  line-height: 0.4em; }
+
+.con-right-menu {
+  position: relative;
+  display: block; }
+
+.arrows,
+.arrows:before {
+  position: absolute;
+  left: 50%; }
+
+.arrows {
+  width: 40px;
+  height: 40px;
+  left: 25%;
+  right: 25%;
+  margin-right: auto;
+  margin-left: auto;
+  top: -webkit-calc(358px + 8vh + 136px);
+  top: calc(358px + 8vh + 136px);
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px #292323 solid;
+  border-bottom: 2px #292323 solid; }
+
+.arrows:before {
+  content: '';
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  margin: -10px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 1px #292323 solid;
+  border-bottom: 1px #292323 solid;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-name: arrow;
+          animation-name: arrow; }
+
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px); } }
+
+@keyframes arrow {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px); } }
+
+/*$intro-height: 358px */
+.container2 {
+  top: 0;
+  margin-top: 1px;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 1360px;
+  background: #000020; }
+
+.fib {
+  position: absolute;
+  width: 880px;
+  height: 680px;
+  top: 25%;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-image: url(/assets/img/fib.svg);
+  background-repeat: no-repeat; }

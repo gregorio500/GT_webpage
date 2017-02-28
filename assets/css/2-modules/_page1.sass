@@ -1,3 +1,8 @@
+$introHeight: 358px
+$introMargin: 4h 
+
+
+
 .container
 	/*position: absolute*/
 	height: 100vh
@@ -9,9 +14,9 @@
     
 
 header
-	/*position: relative*/
+	position: relative
 	height: 120px
-	background: red
+	/*background: red*/
     
 
 
@@ -22,13 +27,11 @@ h1
 	display: flex
 	align-items: center
 	justify-content: center
-	 
 	width: 136px
 	height: 136px
 	background: black
-		/*position: center*/
+	
 	.logo-gt
-		/*margin: auto */
 		position: relative
 		width: 80px
 		height: 80px
@@ -89,76 +92,70 @@ nav
 	display: none
 	a
 		margin-left: 200px
-
-	color: rgba(0,0,0,0.7)
+	    color: rgba(0,0,0,0.7)
 	font:
 		size: 14px
-		weight: 700
-		text-transform: uppercase
+		
+		
 
 
 .intro
 	position: absolute
 	clear: both
-	background : #000000
-    background : rgba(0, 0, 0, 1)
 	width: 745px
-	height: 338px
-	/*text-align: center  margin: 22px 0 0 39px  +136*/
-	/*margin-left: 50%*/
-	/*margin-right: 50%*/
-	margin-top: 20px
+	height: 358px
+	background-color: rgb(0, 0, 0)
+    webkit-box-shadow: 10.5px 18.187px 21px 0px rgba(0, 0, 0, 0.75)
+    z-index: 2
+	margin-top: $introMargin
 	top: 50%
 	left: 50%
 	transform: translate(-50%, -50%)
 	text-align: center
+	display: block
+
+	/*text-align: center  margin: 22px 0 0 39px  +136*/
+	/*margin-left: 50%*/
+	/*margin-right: 50%*/	
+/*justify-content: center*/
 	
 	
 /* start intro animation */
 
-/*.movie*/
-/*	perspective: 500px
-	transform-style: preserve-3d*/
-
-/*#base */
-/*	width: 650px
-    height: 515px
-	margin: 10px auto
-	background: #15b9b9
-    transform: rotateY(-20deg)*/
 
 .movie img 
-	width: 111px  
-    height: 113px
+	width: 111px
+	height: 113px
 	animation: myMove2 5s 0s
 
 
 /*.over */
-/*	width: 650px
-    height: 515px
-    margin: 10px auto
-	position: relative
-	background: #171919*/
+	/*width: 650px*/
+    /*height: 515px*/
+    /*margin: 10px auto*/
+	/*position: relative*/
+	/*background: #171919
 
 .lt-cube-grid 
-	width: 444px; /*435px +213, 444*/
-	height: 339px /*330px + 213, 339*/
-	margin: 0 auto
-	position: relative
+	position: absolute
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	margin: auto
+	width: 444px
+	height: 339px 
+	
+	
 	/*	background-color: aqua; in this place I can put images with text under main image */
-
-/*	background-clip: content-box */
-/*	padding: 10px*/
+    /*	background-clip: content-box */
+    /*	padding: 10px*/
 	  
 
-
-
 .lt-cube-grid .lt-cube 
-	
 	width: 111px
 	height: 113px	
 	animation: left-ScaleDelay 3.5s ease-in
-	/*  background-color: pink; */
 	float: left
 
 
@@ -244,9 +241,114 @@ nav
 		transform: rotateY(0deg) scale(1)
 
 
+.text
+
+	font-size: 1em
+	margin-top: calc(#{$introHeight} + 8vh)
+	
+    /*margin-top: 10px */ 
+    /*line-height: 1px*/
+    /*letter-spacing: 2px*/
+	letter-spacing: 0.1em
+	line-height: 0.4em
+
+
+.con-right-menu
+	position: relative
+	display: block
+
+
+.container-arrow
+
+	
+
+.arrows,
+.arrows:before
+  position: absolute
+  left: 50%
+
+.arrows
+  width: 40px
+  height: 40px
+  left: 25%
+  right: 25%
+  margin-right: auto
+  margin-left: auto
+  top: calc(#{$introHeight} + 8vh + 136px)
+  -webkit-transform: rotate(45deg)
+  border-left: none
+  border-top: none
+  border-right: 2px #292323 solid
+  border-bottom: 2px #292323 solid
 
 
 
+  
+.arrows:before
+  content: ''
+  width: 20px
+  height: 20px
+  top: 50%
+  margin: -10px 0 0 -10px
+  border-left: none
+  border-top: none
+  border-right: 1px #292323 solid
+  border-bottom: 1px #292323 solid
+  animation-duration: 2s
+  animation-iteration-count: infinite
+  animation-name: arrow
+
+
+  
+@keyframes arrow
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    transform: translate(-10px, -10px)
+
+  
+  
+  
+  
+
+
+
+//	.arrows
+		position: absolute
+		left: 25%
+		right: 25%
+		margin-right: auto
+		margin-left: auto
+		top: calc(#{$introHeight} + 8vh + 136px)
+		background: red
+		width: 40px
+		height: 40px
+		transform: rotate(45deg)
+		border-left: none
+		border-top: none
+		border-right: 2px #fff solid
+		border-bottom: 2px #fff solid
+
+//.arrows,
+//.arrows:before
+  position: absolute
+  left: 50%
+
+  
+//@keyframes arrow
+  0%
+    opacity: 1
+  100%
+    opacity: 0
+    transform: translate(-10px, -10px)
+
+  
+  
+  
+  
+
+/*$intro-height: 358px 
 
 
 	
