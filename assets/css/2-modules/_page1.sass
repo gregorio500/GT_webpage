@@ -20,25 +20,25 @@ header
     
 
 
-h1
-	float: left
-	margin: 22px 0 0 39px
-	position: relative
-	display: flex
-	align-items: center
-	justify-content: center
-	width: 136px
-	height: 136px
-	background: black
-	
-	.logo-gt
+	h1  
+		float: left
+		margin: 22px 0 0 39px
 		position: relative
-		width: 80px
-		height: 80px
-		background: 
-			image: url(/assets/img/gt3.svg)
-			repeat: no-repeat
-			position: center
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 136px
+		height: 136px
+		background: black
+
+		.logo-gt
+			position: relative
+			width: 80px
+			height: 80px
+			background: 
+				image: url(/assets/img/gt3.svg)
+				repeat: no-repeat
+				position: center
 
 
 
@@ -258,16 +258,50 @@ nav
 	display: block
 
 
-
-
-	
-
-.arrows,
-.arrows:before
+.down,
+.down:before
   position: absolute
   left: 50%
 
-.arrows
+.down
+  width: 40px
+  height: 40px
+  left: 90%
+  right: 25%
+  margin-right: auto
+  margin-left: auto
+  top: calc(#{$introHeight} + 8vh + 136px)
+  -webkit-transform: rotate(45deg)
+  border-left: none
+  border-top: none
+  border-right: 2px #712727 solid
+  border-bottom: 2px #712727 solid
+
+
+
+  
+.down:before
+  content: ''
+  width: 20px
+  height: 20px
+  top: 50%
+  margin: -10px 0 0 -10px
+  border-left: none
+  border-top: none
+  border-right: 1px #712727 solid
+  border-bottom: 1px #712727 solid
+  animation-duration: 2s
+  animation-iteration-count: infinite
+  animation-name: arrow
+
+	
+
+// .down,
+//.down:before
+  position: absolute
+  left: 50%
+
+//.down
   width: 40px
   height: 40px
   left: 25%
@@ -284,7 +318,7 @@ nav
 
 
   
-.arrows:before
+//.down:before
   content: ''
   width: 20px
   height: 20px
@@ -300,7 +334,7 @@ nav
 
 
   
-@keyframes arrow
+//@keyframes arrow
   0%
     opacity: 1
   100%
