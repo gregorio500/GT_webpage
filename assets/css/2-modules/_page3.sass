@@ -20,6 +20,7 @@
 	text-transform: uppercase
 
 	transform-origin: center
+	animation: rotate 10.5s ease  
 	background: 
 		image: url(/assets/img/circle.svg)
 		repeat: no-repeat
@@ -56,6 +57,13 @@
 	top: 80vh
 	left: 15.5vh
 	
+
+@keyframes rotate 
+  from 
+    transform: rotate(0)
+  
+  to 
+    transform: rotate(-360deg)
 
 		
 

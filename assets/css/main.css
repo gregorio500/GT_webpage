@@ -505,37 +505,38 @@ header {
   position: relative;
   height: 120px;
   /*background: red*/ }
-
-h1 {
-  float: left;
-  margin: 22px 0 0 39px;
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  width: 136px;
-  height: 136px;
-  background: black; }
-  h1 .logo-gt {
+  header h1 {
+    float: left;
+    margin: 22px 0 0 39px;
     position: relative;
-    width: 80px;
-    height: 80px;
-    background-image: url(/assets/img/gt3.svg);
-    background-repeat: no-repeat;
-    background-position: center; }
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    width: 136px;
+    height: 136px;
+    background: black; }
+    header h1 .logo-gt {
+      position: relative;
+      width: 80px;
+      height: 80px;
+      background-image: url(/assets/img/gt3.svg);
+      background-repeat: no-repeat;
+      background-position: center; }
 
 .menu-burger {
   float: right;
-  margin: 22px 39px 0 0px;
+  /*margin: 22px 39px 0 0px*/
+  margin-top: 2%;
+  left: -2%;
   position: relative;
   width: 136px;
   height: 136px;
@@ -834,15 +835,15 @@ nav {
   position: relative;
   display: block; }
 
-.arrows,
-.arrows:before {
+.down,
+.down:before {
   position: absolute;
   left: 50%; }
 
-.arrows {
+.down {
   width: 40px;
   height: 40px;
-  left: 25%;
+  left: 90%;
   right: 25%;
   margin-right: auto;
   margin-left: auto;
@@ -851,10 +852,10 @@ nav {
   -webkit-transform: rotate(45deg);
   border-left: none;
   border-top: none;
-  border-right: 2px #292323 solid;
-  border-bottom: 2px #292323 solid; }
+  border-right: 2px #712727 solid;
+  border-bottom: 2px #712727 solid; }
 
-.arrows:before {
+.down:before {
   content: '';
   width: 20px;
   height: 20px;
@@ -862,8 +863,8 @@ nav {
   margin: -10px 0 0 -10px;
   border-left: none;
   border-top: none;
-  border-right: 1px #292323 solid;
-  border-bottom: 1px #292323 solid;
+  border-right: 1px #712727 solid;
+  border-bottom: 1px #712727 solid;
   -webkit-animation-duration: 2s;
           animation-duration: 2s;
   -webkit-animation-iteration-count: infinite;
@@ -871,23 +872,57 @@ nav {
   -webkit-animation-name: arrow;
           animation-name: arrow; }
 
-@-webkit-keyframes arrow {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate(-10px, -10px);
-            transform: translate(-10px, -10px); } }
+#fp-nav {
+  position: fixed;
+  z-index: 100;
+  top: 65%;
+  right: 6.1%;
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0); }
 
-@keyframes arrow {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate(-10px, -10px);
-            transform: translate(-10px, -10px); } }
+#fp-nav ul li,
+.fp-slidesNav ul li {
+  display: block;
+  width: 14px;
+  height: 13px;
+  margin: 30px;
+  position: relative; }
 
-/*$intro-height: 358px */
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span {
+  width: 10px;
+  height: 10px;
+  /*margin: -5px 0px 0px -5px*/ }
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span {
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  z-index: 1;
+  height: 14px;
+  width: 14px;
+  border: 1px solid red;
+  background: transparent;
+  left: 50%;
+  top: 50%;
+  margin: -12px 0 0 -12px;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out; }
+
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span {
+  width: 16px;
+  height: 16px;
+  margin: -1px 0 0 -18px;
+  background: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 10px solid #ed1212; }
+
 .container2 {
   position: relative;
   height: 100vh;
@@ -939,43 +974,6 @@ nav {
     height: 1em;
     content: url(/assets/img/star.svg); }
 
-.down,
-.down:before {
-  position: absolute;
-  left: 50%; }
-
-.down {
-  width: 40px;
-  height: 40px;
-  left: 90%;
-  right: 25%;
-  margin-right: auto;
-  margin-left: auto;
-  top: -webkit-calc(358px + 8vh + 136px);
-  top: calc(358px + 8vh + 136px);
-  -webkit-transform: rotate(45deg);
-  border-left: none;
-  border-top: none;
-  border-right: 2px #712727 solid;
-  border-bottom: 2px #712727 solid; }
-
-.down:before {
-  content: '';
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  margin: -10px 0 0 -10px;
-  border-left: none;
-  border-top: none;
-  border-right: 1px #712727 solid;
-  border-bottom: 1px #712727 solid;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
-  -webkit-animation-name: arrow;
-          animation-name: arrow; }
-
 .up,
 .up:before {
   position: absolute;
@@ -1012,6 +1010,14 @@ nav {
   -webkit-animation-name: arrow;
           animation-name: arrow; }
 
+@-webkit-keyframes arrow {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0;
+    -webkit-transform: translate(-10px, -10px);
+            transform: translate(-10px, -10px); } }
+
 @keyframes arrow {
   0% {
     opacity: 1; }
@@ -1019,6 +1025,89 @@ nav {
     opacity: 0;
     -webkit-transform: translate(-10px, -10px);
             transform: translate(-10px, -10px); } }
+
+.container3 {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  max-width: 1360px;
+  margin: 0 auto;
+  background: #fffff0; }
+
+.circle {
+  bottom: 0;
+  height: 80vh;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 80vh;
+  text-transform: uppercase;
+  -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: rotate 10.5s ease;
+          animation: rotate 10.5s ease;
+  background-image: url(/assets/img/circle.svg);
+  background-repeat: no-repeat; }
+
+.skills {
+  bottom: 0;
+  left: 0;
+  top: 0;
+  right: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: absolute;
+  margin: auto;
+  font-size: 6vh; }
+
+.html {
+  position: absolute;
+  left: 29.2vh;
+  top: -6vh; }
+
+.python {
+  position: absolute;
+  left: 82vh;
+  top: 37vh; }
+
+.javascript {
+  position: absolute;
+  left: -23vh;
+  top: 37vh; }
+
+.photoshop {
+  position: absolute;
+  top: 80vh;
+  left: 15.5vh; }
+
+@-webkit-keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
+
+@keyframes rotate {
+  from {
+    -webkit-transform: rotate(0);
+            transform: rotate(0); }
+  to {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg); } }
 
 * {
   margin: 0;

@@ -44,7 +44,9 @@ header
 
 .menu-burger
 	float: right
-	margin: 22px 39px 0 0px
+	/*margin: 22px 39px 0 0px*/
+	margin-top: 2%
+	left: -2%
 	position: relative
 	width: 136px
 	height: 136px
@@ -296,93 +298,52 @@ nav
 
 	
 
-// .down,
-//.down:before
-  position: absolute
-  left: 50%
+#fp-nav
+	position: fixed
+	z-index: 100
+	top: 65%
+	right: 6.1%
+	opacity: 1
+	transform: translate3d(0,0,0)
 
-//.down
-  width: 40px
-  height: 40px
-  left: 25%
-  right: 25%
-  margin-right: auto
-  margin-left: auto
-  top: calc(#{$introHeight} + 8vh + 136px)
-  -webkit-transform: rotate(45deg)
-  border-left: none
-  border-top: none
-  border-right: 2px #292323 solid
-  border-bottom: 2px #292323 solid
-
-
-
+#fp-nav ul li,
+.fp-slidesNav ul li 
+  display: block
+  width: 14px
+  height: 13px
+  margin: 30px
+  position: relative
   
-//.down:before
-  content: ''
-  width: 20px
-  height: 20px
+
+#fp-nav ul li:hover a span,
+.fp-slidesNav ul li:hover a span 
+  width: 10px
+  height: 10px
+  /*margin: -5px 0px 0px -5px*/
+
+
+#fp-nav ul li a span,
+.fp-slidesNav ul li a span 
+  border-radius: 50%
+  position: absolute
+  z-index: 1
+  height: 14px
+  width: 14px
+  border: 1px solid red
+  background: transparent
+  left: 50%
   top: 50%
-  margin: -10px 0 0 -10px
-  border-left: none
-  border-top: none
-  border-right: 1px #292323 solid
-  border-bottom: 1px #292323 solid
-  animation-duration: 2s
-  animation-iteration-count: infinite
-  animation-name: arrow
-
-
-  
-//@keyframes arrow
-  0%
-    opacity: 1
-  100%
-    opacity: 0
-    transform: translate(-10px, -10px)
-
-  
-  
-  
+  margin: -12px 0 0 -12px
+  transition: all 0.1s ease-in-out
   
 
-
-
-//	.arrows
-		position: absolute
-		left: 25%
-		right: 25%
-		margin-right: auto
-		margin-left: auto
-		top: calc(#{$introHeight} + 8vh + 136px)
-		background: red
-		width: 40px
-		height: 40px
-		transform: rotate(45deg)
-		border-left: none
-		border-top: none
-		border-right: 2px #fff solid
-		border-bottom: 2px #fff solid
-
-//.arrows,
-//.arrows:before
-  position: absolute
-  left: 50%
-
-  
-//@keyframes arrow
-  0%
-    opacity: 1
-  100%
-    opacity: 0
-    transform: translate(-10px, -10px)
-
-  
-  
-  
-  
-
-/*$intro-height: 358px 
-
-
-	
+#fp-nav ul li a.active span,
+.fp-slidesNav ul li a.active span,
+#fp-nav ul li:hover a.active span,
+.fp-slidesNav ul li:hover a.active span 
+  width: 16px
+  height: 16px
+  margin: -1px 0 0 -18px
+  background: transparent
+  box-sizing: border-box
+  border: 10px solid #ed1212
