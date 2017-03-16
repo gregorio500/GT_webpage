@@ -1,15 +1,11 @@
-$( window ).on( "load", function() {
-
-console.log( "ready!22222" );
-
-
+$(document).ready(function(){
 var slide = $(".slide");
 var viewHeight = $(window).height();
-var sliderInner = $(".slide-base");
+var sliderInner = $(".slider-inner");
 var childrenNo = sliderInner.children().length;
 sliderInner.height( viewHeight * childrenNo );
 $(window).resize(function(){
-viewWidth = $(window).height();
+viewHeight = $(window).height();
 });
 function setHeight(){
 slide.each(function(){
@@ -22,8 +18,8 @@ var clickedIndex = element.index();
 $(".slider-nav .active").removeClass("active");
 element.addClass("active");
 sliderInner.css("transform", "translateY(-" + clickedIndex * viewHeight + "px) translateZ(0)");
-$(".slide-base .active").removeClass("active");
-$(".slide-base .slide").eq(clickedIndex).addClass("active");
+$(".slider-inner .active").removeClass("active");
+$(".slider-inner .slide").eq(clickedIndex).addClass("active");
 }
 setHeight();
 $(".slider-nav > div").on("click", function(){
@@ -33,13 +29,9 @@ $(window).resize(function(){
 setHeight();
 });
 setTimeout(function(){
-$(".slider-top").fadeIn(500);
+$(".slider").fadeIn(500);
 }, 2000);
-
-
-
 });
-
 
 
 

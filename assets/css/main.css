@@ -998,7 +998,11 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%; }
+  height: 100vh;
+  /*line-height: 670px*/
+  text-align: center;
+  color: black;
+  font-size: 2rem; }
 
 .slider-nav {
   position: fixed;
@@ -1033,17 +1037,17 @@ nav {
               transform: scale(2);
       opacity: 1; }
 
-.slider-top {
+.slider {
   position: relative;
   width: 100%;
-  height: 100%;
-  background: white; }
+  height: 100vh;
+  overflow: hidden;
+  background: #1d1919; }
 
-.slider-base {
+.slider-inner {
   position: absolute;
   left: 0;
   top: 0;
-  height: 100%;
   width: 100%;
   -webkit-transition-timing-function: cubic-bezier(0.22, 1.61, 0.65, 1);
           transition-timing-function: cubic-bezier(0.22, 1.61, 0.65, 1);
@@ -1056,8 +1060,7 @@ nav {
 
 .slide {
   position: absolute;
-  top: 0;
-  height: 100%;
+  left: 0;
   width: 100%;
   -webkit-transition-timing-function: cubic-bezier(0.25, 0.5, 0.25, 1.25);
           transition-timing-function: cubic-bezier(0.25, 0.5, 0.25, 1.25);
