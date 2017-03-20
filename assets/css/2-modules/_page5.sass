@@ -5,3 +5,132 @@
 	max-width: 1360px
 	margin: 0 auto
 	background: #bababa
+
+
+
+.diamond 
+	/*width: 20%*/
+	/*height: 50%*/
+	/*top: 30%*/
+	/*left: 35%*/
+	position: absolute
+	clip-path: polygon(80% 0, 100% 20%, 50% 100%, 0 20%, 20% 0)
+	background: red
+	transform: translate(-50%, -50%)
+	text-align: center
+	z-index: 2000
+
+	left: -150px
+	bottom: -350px
+	height: 300px 
+	width: 300px
+	color: #7C6855
+	font-size: 90px
+	line-height: 100px
+	text-align: center
+	background: #9B826A
+	background: linear-gradient(to right,  #7c6855 0%,#9b826a 51%,#7c6855 100%)
+	background-size: 200% auto
+	border-radius: 1%
+	animation: spin 5s infinite alternate ease-in-out
+
+	
+	
+	
+	
+
+.curv-triangle
+	/*width: 20%*/
+    /*height: 50%*/
+	left: 1px
+	bottom: -500px
+	height: 350px 
+	width: 350px
+	color: #113fd9
+	font-size: 90px
+	line-height: 100px
+	text-align: center
+
+	
+	position: absolute
+	
+	/*top: 50%*/
+	/*left: 45%*/
+	transform: translate(-50%, -50%)
+
+	
+	background:
+		image: url("/assets/img/curv-triangle3.svg")
+		background: 	
+		repeat: no-repeat
+
+	
+	z-index: 1000
+
+
+
+
+.string 
+	overflow: visible
+	position: absolute
+	top: -10px
+	right: 50%
+	height: 200px
+	width: 2px
+
+
+	background: #242600
+
+	background: linear-gradient(135deg,  #242600 8%,#b8944d 42%,#b8944d 42%,#b8944d 57%,#242600 94%)
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#242600', endColorstr='#242600',GradientType=1 )
+
+
+
+  	background-size: 5px 5px
+  
+	transform-origin: top
+
+	
+	animation: pendulum 3s infinite alternate ease-in-out
+
+/*.disc 
+	overflow: visible
+	position: absolute
+	left: -50px
+	bottom: -100px
+	height: 100px 
+	width: 100px
+
+	color: #7C6855
+	font-size: 90px
+	line-height: 100px
+	text-align: center
+
+	background: #9B826A
+		
+	background: linear-gradient(to right,  #7c6855 0%,#9b826a 51%,#7c6855 100%)
+	background-size: 200% auto
+	border-radius: 5%
+	animation: spin 5s infinite alternate ease-in-out*/
+
+
+  	
+
+
+@keyframes spin 
+	0% 
+		transform: perspective(800px) rotateY(30deg)
+		background-position: 100% 0
+		box-shadow: -4px 0 0 #7C6855
+		text-shadow: 1px 0 2px #ab9683
+		
+	100%
+		transform: perspective(800px) rotateY(-30deg)
+		background-position: 0 0
+		box-shadow: 4px 0 0 #7C6855
+		text-shadow: -1px 0 2px #ab9683
+
+  	
+
+
+		
