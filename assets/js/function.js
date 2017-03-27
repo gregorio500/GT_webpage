@@ -1,4 +1,7 @@
-$(document).ready(function(){
+(function($){
+		'use strict';
+	
+/*$(document).ready(function(){*/
 var slide = $(".slide");
 var viewHeight = $(window).height();
 var sliderInner = $(".slider-inner");
@@ -56,7 +59,12 @@ function update() {
 }
 update();
 	
-});
+/*});*/
+	
+	
+
+	
+})(jQuery);
 
 
 

@@ -523,7 +523,7 @@ header {
             justify-content: center;
     width: 136px;
     height: 136px;
-    background: black; }
+    background: #333333; }
     header h1 .logo-gt {
       position: relative;
       width: 80px;
@@ -540,7 +540,7 @@ header {
   position: relative;
   width: 136px;
   height: 136px;
-  background: black;
+  background: #333333;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   cursor: pointer; }
@@ -593,8 +593,8 @@ nav {
   clear: both;
   width: 745px;
   height: 358px;
-  background-color: black;
-    background-color-webkit-box-shadow: 10.5px 18.187px 21px 0px rgba(0, 0, 0, 0.75);
+  background-color: #1d1d1b;
+    background-color-box-shadow: 10.5px 18.187px 21px 0px rgba(0, 0, 0, 0.75);
     background-color-z-index: 2;
   margin-top: 4h;
   top: 50%;
@@ -1031,7 +1031,7 @@ nav {
   position: absolute;
   top: -1px;
   right: 50%;
-  height: 170px;
+  height: 189px;
   width: 6px;
   background: -webkit-gradient(linear, left top, right top, color-stop(3.37%, #a8a7a3), color-stop(13.38%, #b1b1b2), color-stop(21.91%, #bbbcc2), color-stop(35.03%, #acafb4), color-stop(60.09%, #858c90), color-stop(71.91%, #71797d), to(#9aa0a4));
   background: -webkit-linear-gradient(left, #a8a7a3 3.37%, #b1b1b2 13.38%, #bbbcc2 21.91%, #acafb4 35.03%, #858c90 60.09%, #71797d 71.91%, #9aa0a4 100%);
@@ -1046,7 +1046,7 @@ nav {
 
 .curv-triangle {
   left: 3px;
-  top: 392px;
+  top: 412px;
   height: 460px;
   width: 450px;
   /*line-height: 100px*/
@@ -1054,7 +1054,7 @@ nav {
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/white_leather.png);
+  background: url(/assets/img/texture.png);
   -webkit-clip-path: polygon(50% 1%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
           clip-path: polygon(50% 1%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%);
   -webkit-box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8), inset 0px 2px 1px #fff, inset 0px -2px 10px rgba(0, 0, 0, 0.5);
@@ -1076,14 +1076,46 @@ nav {
   -webkit-border-radius: 10px;
           border-radius: 10px; }
 
+.contactText {
+  position: absolute;
+  /*z-index: 2001*/
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: translate(0%, 0%);
+      -ms-transform: translate(0%, 0%);
+          transform: translate(0%, 0%); }
+  .contactText #h2txt {
+    position: relative;
+    -webkit-transform: translate(0%, 120%);
+        -ms-transform: translate(0%, 120%);
+            transform: translate(0%, 120%);
+    /*line-height: 1.4em*/
+    font-size: 1.4em;
+    /*color: #0cf01e*/
+    /*background-color: #333*/
+    letter-spacing: .1em;
+    text-align: center;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: #555A5F;
+    text-shadow: 0 -1px 0 #ada9e2, 0 1px 0 #787195, 0 0 12px #59549b; }
+
 .diamond {
   position: absolute;
   -webkit-clip-path: polygon(80% 0, 100% 20%, 50% 100%, 0 20%, 20% 0);
           clip-path: polygon(80% 0, 100% 20%, 50% 100%, 0 20%, 20% 0);
-  background: red;
   z-index: 2000;
-  top: 260px;
-  right: -134px;
+  top: 0px;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto;
+  -webkit-transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   height: 270px;
   width: 270px;
   background: -webkit-gradient(linear, left top, right top, color-stop(3.37%, #b2b2b2), color-stop(23.84%, #c1c1c1), color-stop(38.2%, #cecece), color-stop(58.01%, #bfbfbf), color-stop(71.91%, #b2b2b2), color-stop(100%, #dadada), to(#b2b2b2));
@@ -1097,41 +1129,27 @@ nav {
           animation: spin 5s infinite alternate ease-in-out; }
 
 .contact {
-  /*position: absolute*/
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-flow: column;
-      -ms-flex-flow: column;
-          flex-flow: column;
-  width: 10em;
-  height: 10em;
-  list-style-type: none;
-  /*background: green*/ }
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  -webkit-transform: translate(50%, 0%);
+      -ms-transform: translate(50%, 0%);
+          transform: translate(50%, 0%);
+  /*background: red*/
+  list-style-type: none; }
 
 .contact a {
   display: block;
   /*overflow: hidden*/
+  -webkit-transform: translate(-50%, 0%);
+      -ms-transform: translate(-50%, 0%);
+          transform: translate(-50%, 0%);
   opacity: 1;
-  margin-top: 10%;
-  list-style-type: none;
-  /*line-height: 2em*/
-  /*margin: 0 .20em*/
-  /*color: #555*/
-  /*font-size: 1.5em*/
-  /*border-radius: 90%*/
-  /*background: red*/ }
+  margin-top: 3%;
+  list-style-type: none; }
 
 .icon-mail {
   position: relative;
@@ -1213,8 +1231,8 @@ nav {
           border-radius: 10px;
   background: #1d1919;
   z-index: 100;
-  -webkit-box-shadow: #04051f 0px 0px 30px 2px;
-          box-shadow: #04051f 0px 0px 30px 2px; }
+  -webkit-box-shadow: #191818 0px 0px 30px 2px;
+          box-shadow: #191818 0px 0px 30px 2px; }
   .slider-nav > div {
     width: 20px;
     height: 20px;

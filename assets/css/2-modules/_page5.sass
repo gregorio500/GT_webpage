@@ -13,7 +13,7 @@
 	position: absolute
 	top: -1px
 	right: 50%
-	height: 170px
+	height: 189px
 	width: 6px
 	background : linear-gradient(90deg, rgba(168, 167, 163, 1) 3.37%, rgba(177, 177, 178, 1) 13.38%, rgba(187, 188, 194, 1) 21.91%, rgba(172, 175, 180, 1) 35.03%, rgba(133, 140, 144, 1) 60.09%, rgba(113, 121, 125, 1) 71.91%, rgba(154, 160, 164, 1) 100%)
 	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#A8A7A3',endColorstr='#9AA0A4' , GradientType=1)
@@ -25,20 +25,20 @@
 .curv-triangle
 
 	left: 3px
-	top: 392px
+	top: 412px
 	height: 460px 
 	width: 450px
 	/*line-height: 100px*/
 	position: absolute
+	
 	transform: translate(-50%, -50%)
-	background: url(http://cdn.backgroundhost.com/backgrounds/subtlepatterns/white_leather.png)
+	background: url(/assets/img/texture.png)
 	clip-path: polygon(50% 1%, 100% 20%, 100% 80%, 50% 100%, 0 80%, 0 20%)
 	box-shadow:  0px 0px 30px rgba(0,0,0,.8), inset 0px 2px 1px #fff, inset 0px -2px 10px rgba(0,0,0,.5)
     border-radius: 10px
 	
 
 .curv-triangle::after
-
 		content: ''
 		display: block
 		width: 100%
@@ -50,17 +50,45 @@
 		z-index: 300
 		border-radius: 10px
 
-	
 
+.contactText
+	position: absolute
+	/*z-index: 2001*/
+	top: 0
+	right: 0
+	left: 0
+	bottom: 0
+	margin: auto
+	
+	transform: translate(0%, 0%)
+	
+	#h2txt
+		position: relative
+		transform: translate(0%, 120%)
+		/*line-height: 1.4em*/
+		font-size: 1.4em
+		/*color: #0cf01e*/
+		/*background-color: #333*/
+		letter-spacing: .1em
+		text-align: center
+		text-transform: uppercase
+		text-rendering: optimizeLegibility
+
+	
+		color: #555A5F
+		text-shadow: 0 -1px 0 #ada9e2, 0 1px 0 #787195, 0 0 12px #59549b
 
 .diamond 
 	position: absolute
 	clip-path: polygon(80% 0, 100% 20%, 50% 100%, 0 20%, 20% 0)
-	background: red
-	
 	z-index: 2000
-	top: 260px
-	right: -134px
+	top: 0px
+	right: 0
+	left: 0
+	bottom: 0
+	margin: auto
+	
+	transform: translate(-50%, -50%)
 	height: 270px 
 	width: 270px
 	background : linear-gradient(90deg, rgba(178, 178, 178, 1) 3.37%, rgba(193, 193, 193, 1) 23.84%, rgba(206, 206, 206, 1) 38.2%, rgba(191, 191, 191, 1) 58.01%, rgba(178, 178, 178, 1) 71.91%, rgba(218, 218, 218, 1) 100%, rgba(178, 178, 178, 1) 100%);
@@ -71,31 +99,31 @@
 
 
 .contact 
-	/*position: absolute*/
-	display: flex
-	align-items: center
-	justify-content: center
-	flex-flow: column
-	width: 10em
-	height: 10em
+	position: absolute
+    
+	top: 0
+	bottom: 0
+	right: 0
+	left: 0
+	margin: auto
+	transform: translate(50%, 0%)
+	
+	/*background: red*/
+	
 	list-style-type: none
 	
-	/*background: green*/
+	
 	
 
 
 .contact a 
 	display: block
 	/*overflow: hidden*/
+	transform: translate(-50%, 0%)
 	opacity: 1
-	margin-top: 10%
+	margin-top: 3%
 	list-style-type: none
-	/*line-height: 2em*/
-	/*margin: 0 .20em*/
-	/*color: #555*/
-	/*font-size: 1.5em*/
-	/*border-radius: 90%*/
-	/*background: red*/
+	
 	
   	
 	
