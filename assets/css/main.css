@@ -831,27 +831,30 @@ nav {
   background: #021519; }
 
 .fib {
-  width: 96%;
   bottom: 0;
-  height: 90%;
-  width: 90%;
-  left: 0%;
+  height: auto;
+  width: 75%;
+  left: -10%;
   margin: auto;
   position: absolute;
   right: 0%;
   top: 5%;
-  background-image: url(/assets/img/fib.svg);
-  background-repeat: no-repeat; }
+  /*background:
+		image: url(/assets/img/fib.svg)
+		repeat: no-repeat*/ }
 
 .who {
-  /*text-align: justify*/
+  position: absolute;
   width: 85%;
+  top: 5%;
   resize: both; }
   .who h2 {
     margin-left: 5%; }
   .who ul li {
+    left: 5%;
     list-style: none;
-    position: relative; }
+    position: relative;
+    color: white; }
     .who ul li:nth-child(1) {
       margin-left: 10%;
       margin-top: 8%; }
@@ -862,7 +865,7 @@ nav {
       margin-left: 25%;
       margin-top: 8%; }
     .who ul li:nth-child(4) {
-      margin-left: 37%;
+      margin-left: 40%;
       margin-top: 8%; }
   .who li:before {
     position: absolute;
