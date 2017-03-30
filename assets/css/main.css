@@ -842,6 +842,23 @@ nav {
   right: 0%;
   top: 5%; }
 
+.emitter {
+  background-color: green;
+  width: 30px;
+  height: 30px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  top: 0; }
+
+.dot {
+  background-color: #ffff66;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  z-index: 5000;
+  pointer-events: none; }
+
 .who {
   position: absolute;
   width: 95%;
