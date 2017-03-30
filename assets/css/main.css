@@ -828,7 +828,9 @@ nav {
   width: 100%;
   max-width: 1360px;
   margin: 0 auto;
-  background: #021519; }
+  /*background: #021519*/
+  background: #2B2B2B;
+  /*background: radial-gradient(ellipse at center, rgba(125,126,125,1) 0%,rgba(14,14,14,1) 100%) filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2B2B2B', endColorstr='#0e0e0e',GradientType=1)*/ }
 
 .fib {
   bottom: 0;
@@ -838,10 +840,7 @@ nav {
   margin: auto;
   position: absolute;
   right: 0%;
-  top: 5%;
-  /*background:
-		image: url(/assets/img/fib.svg)
-		repeat: no-repeat*/ }
+  top: 5%; }
 
 .who {
   position: absolute;
@@ -849,12 +848,13 @@ nav {
   top: 5%;
   resize: both; }
   .who h2 {
-    margin-left: 5%; }
+    margin-left: 5%;
+    color: #E9E581; }
   .who ul li {
     left: 5%;
     list-style: none;
     position: relative;
-    color: white; }
+    color: #F6F6F6; }
     .who ul li:nth-child(1) {
       margin-left: 10%;
       margin-top: 8%; }
