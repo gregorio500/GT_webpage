@@ -61,7 +61,7 @@ for(var i=0; i<emitters.length; i++) {
   TweenLite.set(emitters[i], {x:points[i][0].x, y:points[i][0].y})
   //this tween calls the hideDots function when it is done. All dots with class ".emitter"+i will be hidden
   //start both tweens paused
-  var tween = TweenMax.to(emitters[i], 8, {bezier:{type:"cubic", values:points[i]}, force3D:true, ease:Power0.easeNone, onComplete:hideDots, onCompleteParams:[".emitter" + i], paused:true});
+  var tween = TweenMax.to(emitters[i], 8, {bezier:{type:"cubic", values:points[i]}, force3D:true, ease:Power0.easeNone, onComplete:hideDots, onCompleteParams:[".emitter" + i], paused:true, align:".emitter"});
   
   tweens.push(tween);
   
