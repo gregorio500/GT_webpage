@@ -841,6 +841,14 @@ nav {
   right: 0%;
   top: 5%; }
 
+svg {
+  position: absolute; }
+
+.line-cont {
+  width: 100%;
+  height: 100%;
+  position: absolute; }
+
 .emitter {
   background-color: green;
   width: 2em;
@@ -848,16 +856,8 @@ nav {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
-  top: 0em;
-  left: -2em; }
-
-.dot {
-  background-color: #ffff66;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  position: absolute;
-  z-index: 5000;
-  pointer-events: none; }
+  top: 0%;
+  left: 0%; }
 
 .who {
   position: absolute;
