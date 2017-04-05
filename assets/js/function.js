@@ -1,6 +1,5 @@
 (function($){
 		'use strict';
-	
 /*$(document).ready(function(){*/
 var slide = $(".slide");
 var viewHeight = $(window).height();
@@ -61,7 +60,10 @@ update();
 	
 /*});*/
 	
-	
+window.onload=function() {
+var svgDoc = $(".svgObject")[0].contentDocument; 
+ 
+};	
 
 	
 })(jQuery);

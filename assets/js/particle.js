@@ -1,5 +1,5 @@
 
-/*var snapA = Snap("#svgA");
+/*var snapA = Snap(".line");
 var pathA = snapA.path("M0.4,0.4c0,360.1,291.9,652,652,652c225.1,0,407.5-182.4,407.5-407.5c0-135-109.5-244.5-244.5-244.5c-90,0-163,73-163,163c0,45,36.5,81.5,81.5,81.5s81.5-36.5,81.5-81.5").attr({
 	id: "fibanocci",
 	fill: "none",
@@ -11,9 +11,11 @@ var pathA = snapA.path("M0.4,0.4c0,360.1,291.9,652,652,652c225.1,0,407.5-182.4,4
 
 var animatePath = pathA.getTotalLength();
 var movePoint = pathA.getPointAtLength( animatePath );
-
-
-var snapEmitter = snapA.circle(40,40,26);
+var xx = movePoint.x;
+var yy = movePoint.y;
+var gsap = {x: movePoint.x, y:movePoint.y};
+TweenMax.to($('.emitter'),20, {values:gsap});*/
+/*var snapEmitter = snapA.circle(40,40,26);
   snapEmitter.attr({
     fill: "#f00959",
     stroke: "#eff5ee",
@@ -60,34 +62,56 @@ for (var i = 0; i < dataLength; i++) {
 
 /*next option which should works*/
 
+
 /*
 var path = convertToCubicBezier($('path')[0]);
+$(window).resize(Resize);
+  function Resize() {
+    var $window = $(window) ,
+        maxWidth  = $('.emitter').width() ,
+        width = $window.width(),
+        scale;
+    if( width >= maxWidth ) { return } // U can remove this line if you want always container fit to screen 
+    TweenMax.set('.emitter',{scale: Math.min(width/maxWidth),transformOrigin:"0% 0%"});
+};
+Resize(); 
 
 $("#startPoint").on("click", function() { 	  
-    TweenLite.set(".emitter",{x:0,y:0});
-	TweenLite.set('.emitter',{xPercent:-150,yPercent:-100});
+    TweenMax.set(".emitter",{x:0,y:0});
+	TweenMax.set('.emitter',{xPercent:-150,yPercent:-100});
+	TweenMax.set('.emitter',{svgOrigin:"500, 300"});
 	
-	var t =TweenMax.to($('.emitter'),20,{bezier:{type:'cubic', values:path}});
+	var t = TweenMax.to($('.emitter'),20,{bezier:{type:'cubic', values:path}});
 	});
 */
 
 
 
 
+$bezierData = MorphSVGPlugin.pathDataToBezier(pathObj, {relative:true});
+
+
+TweenMax.set([".emitter", "#theSvg"], {xPercent:-50, yPercent:-50});
+
+TweenMax.to($(".emitter"), 5, {bezier: {values:$bezierData, type:"cubic"}, ease:Quad.easeNone, repeat:-1, yoyo:true});
 
 
 
 
 
 
-var orig = document.querySelector('path'), length, timer;
+
+
+//draw the fib line
+//start
+/*var orig = document.querySelector('path'), length, timer;
 var obj = {length:10,
            pathLength:orig.getTotalLength()};
 orig.style.stroke = '#419ccc';
 
 
 var tl = new TimelineMax;
-var t2 = tl.to(obj, 7, {length:obj.pathLength, onUpdate:drawLine, ease:Linear.easeNone});
+var t1 = tl.to(obj, 7, {length:obj.pathLength, onUpdate:drawLine, ease:Linear.easeNone});
  
 
 function drawLine() {
@@ -95,17 +119,17 @@ function drawLine() {
    [obj.length,obj.pathLength].join(' '); 
 }
 $(".who").click(function() {
-		t2.restart();
-});
+		t1.restart();
+});*/
 
 
-
+// end
 
 
 
 /*the new*/
 
-jQuery(document).ready(function(){
+/*jQuery(document).ready(function(){
 		//calc_positions(80);
    
 
@@ -123,6 +147,12 @@ jQuery(document).ready(function(){
 	
 
 });
+
+
+
+
+
+
 
 function calc_positions(percent_down_the_line){
 		var $svg = jQuery('.line-cont .line');
@@ -189,17 +219,14 @@ function calc_positions(percent_down_the_line){
 
 
 		//angle = Math.atan2(p[1].y-p[0].y,p[1].x-p[0].x)*180 / Math.PI;
-		angle = Math.atan2(container_p1_y_pixels-container_p0_y_pixels,container_p1_x_pixels-container_p0_x_pixels)*180 / Math.PI;
-		//console.log(angle, 'angle');
+		/*angle = Math.atan2(container_p1_y_pixels-container_p0_y_pixels,container_p1_x_pixels-container_p0_x_pixels)*180 / Math.PI;
+		
 	
 	$(".who").click(function() {
-		var t = TweenMax.to($object, 8, { css: {rotation: angle + 90} });
+		var t = TweenMax.to($object, 3, { css: {rotation: angle + 90}, ease:Linear.easeNone });
 		t.restart();
 });
-
-
-
-}
+} */
 
 
 		

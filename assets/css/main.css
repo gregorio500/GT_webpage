@@ -831,23 +831,20 @@ nav {
   /*background: #021519*/
   background: #2B2B2B; }
 
-.fib {
-  bottom: 0;
-  height: auto;
-  width: 77%;
-  left: -10%;
-  margin: auto;
-  position: absolute;
-  right: 0%;
-  top: 5%; }
-
-svg {
-  position: absolute; }
-
-.line-cont {
-  width: 100%;
+.wrapper {
+  width: 80%;
   height: 100%;
+  top: 3%;
+  left: 5%;
+  /*right: 4%*/
   position: absolute; }
+
+.container-img {
+  width: 100%;
+  position: absolute; }
+
+object {
+  width: 100%; }
 
 .emitter {
   background-color: green;
@@ -856,14 +853,13 @@ svg {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
-  top: 0%;
-  left: 0%; }
+  top: 0;
+  left: 0; }
 
 .who {
   position: absolute;
-  width: 95%;
+  width: 67%;
   top: 2%;
-  width: 85%;
   top: 5%;
   resize: both; }
   .who h2 {
@@ -897,22 +893,6 @@ svg {
     width: 1.5em;
     height: 1em;
     content: url(/assets/img/star.svg); }
-
-@-webkit-keyframes arrow {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate(-10px, -10px);
-            transform: translate(-10px, -10px); } }
-
-@keyframes arrow {
-  0% {
-    opacity: 1; }
-  100% {
-    opacity: 0;
-    -webkit-transform: translate(-10px, -10px);
-            transform: translate(-10px, -10px); } }
 
 .container3 {
   position: relative;
