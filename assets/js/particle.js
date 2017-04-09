@@ -1,3 +1,9 @@
+$bezierData = MorphSVGPlugin.pathDataToBezier("#thePath", {relative:true});
+TweenMax.set("#thePath", {stroke:"red", strokeWidth:5, fill: "none"});
+
+TweenMax.set([".emitter", "#em-line"], {xPercent:-50, yPercent:-50});
+
+TweenMax.to($(".emitter"), 5, {bezier: {values:$bezierData, type:"cubic"}, ease:Quad.easeNone, repeat:-1, yoyo:true});
 
 /*var snapA = Snap(".line");
 var pathA = snapA.path("M0.4,0.4c0,360.1,291.9,652,652,652c225.1,0,407.5-182.4,407.5-407.5c0-135-109.5-244.5-244.5-244.5c-90,0-163,73-163,163c0,45,36.5,81.5,81.5,81.5s81.5-36.5,81.5-81.5").attr({
@@ -88,12 +94,6 @@ $("#startPoint").on("click", function() {
 
 
 
-$bezierData = MorphSVGPlugin.pathDataToBezier(pathObj, {relative:true});
-
-
-TweenMax.set([".emitter", "#theSvg"], {xPercent:-50, yPercent:-50});
-
-TweenMax.to($(".emitter"), 5, {bezier: {values:$bezierData, type:"cubic"}, ease:Quad.easeNone, repeat:-1, yoyo:true});
 
 
 

@@ -839,7 +839,7 @@ nav {
   /*right: 4%*/
   position: absolute; }
 
-.container-img {
+.container-svg {
   width: 100%;
   position: absolute; }
 
@@ -858,7 +858,7 @@ object {
 
 .who {
   position: absolute;
-  width: 67%;
+  width: 80%;
   top: 2%;
   top: 5%;
   resize: both; }

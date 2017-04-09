@@ -3,8 +3,9 @@ var browserSync = require('browser-sync');
 var sass        = require('gulp-sass');
 var prefix      = require('gulp-autoprefixer');
 var cp          = require('child_process');
-var csso        = require('gulp-csso')
+var csso        = require('gulp-csso');
 var cleanCSS = require('gulp-clean-css');
+
 
 var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 var messages = {
@@ -81,12 +82,26 @@ gulp.task('watch', function () {
 	 
 });
 
-/** minify css 777 */
+
+
+
+/*
 gulp.task('minify-css', function() {
-  return gulp.src('styles/*.css')
-    .pipe(cleanCSS({compatibility: 'ie8'}))
-    .pipe(gulp.dest('dist'));
+  return gulp.src('css/index.css')
+    .pipe(cleanCSS())
+    .pipe(size({title: 'styles'}))
+    .pipe(rename({
+      suffix: '.min'
+    }))
+    .pipe(gulp.dest('_includes/css/'));
 });
+*/
+
+/*gulp.task('styles', function() {
+    return gulp.src(paths.styles)
+        .pipe(minifycss({compatibility: 'ie8'}))
+        .pipe(gulp.dest('dist'));
+});*/
 
 
 
