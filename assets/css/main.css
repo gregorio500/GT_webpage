@@ -831,6 +831,7 @@ nav {
   /*background: #021519*/
   background: #2B2B2B; }
 
+<<<<<<< HEAD
 .wrapper {
   width: 80%;
   height: 100%;
@@ -845,6 +846,17 @@ nav {
 
 object {
   width: 100%; }
+=======
+.fib {
+  bottom: 0;
+  height: auto;
+  width: 77%;
+  left: -10%;
+  margin: auto;
+  position: absolute;
+  right: 0%;
+  top: 5%; }
+>>>>>>> parent of b3c2134... end fib animation
 
 .emitter {
   background-color: green;
@@ -853,8 +865,21 @@ object {
   -webkit-border-radius: 50%;
           border-radius: 50%;
   position: absolute;
+<<<<<<< HEAD
   top: 0;
   left: 0; }
+=======
+  top: 0em;
+  left: -2em; }
+
+.dot {
+  background-color: #ffff66;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  position: absolute;
+  z-index: 5000;
+  pointer-events: none; }
+>>>>>>> parent of b3c2134... end fib animation
 
 .who {
   position: absolute;

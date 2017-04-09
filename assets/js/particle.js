@@ -1,21 +1,29 @@
 $bezierData = MorphSVGPlugin.pathDataToBezier("#thePath", {relative:true});
 TweenMax.set("#thePath", {stroke:"red", strokeWidth:5, fill: "none"});
 
+<<<<<<< HEAD
 TweenMax.set([".emitter", "#em-line"], {xPercent:-50, yPercent:-50});
 
 TweenMax.to($(".emitter"), 5, {bezier: {values:$bezierData, type:"cubic"}, ease:Quad.easeNone, repeat:-1, yoyo:true});
 
 /*var snapA = Snap(".line");
 var pathA = snapA.path("M0.4,0.4c0,360.1,291.9,652,652,652c225.1,0,407.5-182.4,407.5-407.5c0-135-109.5-244.5-244.5-244.5c-90,0-163,73-163,163c0,45,36.5,81.5,81.5,81.5s81.5-36.5,81.5-81.5").attr({
+=======
+
+var snapA = Snap("#svgA");
+
+var pathA = snapA.path("M738.5,249.5c45.01,0,81.5-36.49,81.5-81.5 M657,168c0,45.01,36.49,81.5,81.5,81.5 M820,5c-90.02,0-163,72.98-163,163 M1064.5,249.5C1064.5,114.47,955.03,5,820,5 M657,657c225.06,0,407.5-182.44,407.5-407.5 M5,5c0,360.09,291.91,652,652,652").attr({
+>>>>>>> parent of b3c2134... end fib animation
 	id: "fibanocci",
 	fill: "none",
 	strokeWidth: "4",
 	stroke: "#419ccc",
-	strokeMiterlimit: "10",
+	strokeMiterlimit: "10"
 });
 
 
 var animatePath = pathA.getTotalLength();
+<<<<<<< HEAD
 var movePoint = pathA.getPointAtLength( animatePath );
 var xx = movePoint.x;
 var yy = movePoint.y;
@@ -23,11 +31,19 @@ var gsap = {x: movePoint.x, y:movePoint.y};
 TweenMax.to($('.emitter'),20, {values:gsap});*/
 /*var snapEmitter = snapA.circle(40,40,26);
   snapEmitter.attr({
+=======
+
+
+
+var emitter = snapB.circle(26,26,16);
+  CircleB.attr({
+>>>>>>> parent of b3c2134... end fib animation
     fill: "#f00959",
-    stroke: "#eff5ee",
-    strokeWidth: 1
+    stroke: "#fff",
+    strokeWidth: 2
   });
 
+<<<<<<< HEAD
 $("#startPoint").on("click", function() {
 	
 	setTimeout( function() {
@@ -232,5 +248,7 @@ function calc_positions(percent_down_the_line){
 		
 
 
+=======
+>>>>>>> parent of b3c2134... end fib animation
 
-	  
+	
